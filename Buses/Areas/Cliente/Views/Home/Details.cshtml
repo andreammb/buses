@@ -1,0 +1,115 @@
+﻿@model Buses.Models.ViewModels.HomeVM
+@{
+    ViewData["Title"] = "Información Ruta";
+}
+<link rel="stylesheet" type="text/css" href="~/css/reserva.css" /> 
+
+<div class="header">
+     <a asp-action="Index" class="btn btn-success btn-sm">Volver</a>
+    <div>
+        <h4 class="text-primary">Origen: @Model.Ruta.Origen</h4>
+        <h4 class="text-primary">Destino: @Model.Ruta.Destino</h4>
+        <h4 class="text-primary" id="precio" data-precio="@Model.Ruta.Precio">Precio: @Model.Ruta.Precio</h4>
+    </div>
+    
+</div>
+@if (Model.Buses.Count() > 0)
+{
+    <div>
+        @foreach (var bus in Model.Buses.OrderBy(i => i.Id))
+        {
+            <div class="pair">
+                <div>
+                    <br />
+                    <h2>Salida: @bus.Horario </h2>
+                    <p>Codigo de bus</p>
+                    <form method="post" asp-action="Reservar">
+                        <input type="number" asp-for="Reserva.BusId" class="form-control" id="busId" disabled data-bus=@bus.Id />
+
+                    <p>Asientos reservados</p>
+                    <input asp-for="Reserva.Asiento" class="form-control" disabled id="asientos" placeholder="Asientos reservados" />
+                    
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                            <button type="submit" class="btn btn-success form-control" >Reservar</button>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success align-self-center" href="/Identity/Account/Register">
+                            Debes crear una cuenta para comprar
+                        </a>
+                    }
+                    </form>
+                </div>
+                <div>
+                    <div>
+                        <div class="bus-container">
+                            <label for="bus">Selecciona los asientos</label>
+                        </div>
+                        <ul class="showcase-container">
+                            <li>
+                                <div class="seat sold"></div>
+                                <small>Vendido</small>
+                            </li>
+                            <li>
+                                <div class="seat available"></div>
+                                <small>Disponible</small>
+                            </li>
+                            <li>
+                                <div class="seat selected"></div>
+                                <small>Seleccionado</small>
+                            </li>
+                        </ul>
+                        <div class="seating-container">
+                            <div class="row">
+                                <div id="1" class="seat"></div>
+                                <div id="2" class="seat sold"></div>
+                                <div id="3" class="seat sold"></div>
+                                <div id="4" class="seat sold"></div>
+                                <div id="5" class="seat sold"></div>
+                            </div>
+                            <div class="row">
+                                <div id="5" class="seat"></div>
+                                <div id="7" class="seat"></div>
+                                <div id="8" class="seat"></div>
+                                <div id="9" class="seat sold"></div>
+                                <div id="10" class="seat sold"></div>
+                            </div>
+                            <div class="row">
+                                <div id="11" class="seat"></div>
+                                <div id="12" class="seat sold"></div>
+                                <div id="13" class="seat sold"></div>
+                                <div id="14" class="seat"></div>
+                                <div id="15" class="seat"></div>
+                            </div>
+                            <div class="row">
+                                <div id="16" class="seat"></div>
+                                <div id="17" class="seat"></div>
+                                <div id="18" class="seat"></div>
+                                <div id="19" class="seat"></div>
+                                <div id="20" class="seat"></div>
+                            </div>
+                            <div class="row">
+                                <div id="21" class="seat"></div>
+                                <div id="22" class="seat"></div>
+                                <div id="23" class="seat"></div>
+                                <div id="24" class="seat sold"></div>
+                                <div id="25" class="seat sold"></div>
+                            </div>
+                            <div class="summary">
+                                <p>Has seleccionado <span class="bold" id="count">0</span> asientos, precio total ₡<span class="bold" id="total">0</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No Hay rutas disponibles</p>
+}
+@section Scripts {
+    <script src="~/js/reserva.js"></script>
+}

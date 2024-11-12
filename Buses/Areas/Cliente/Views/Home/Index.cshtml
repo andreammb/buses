@@ -1,0 +1,31 @@
+﻿@model Buses.Models.ViewModels.HomeVM
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="row mt-1">
+    <div class="col-sm-12">
+        <h1 class="text-center text-white bg-secondary py-1">Rutas Disponibles</h1>
+    </div>
+</div>
+
+@if (Model.Rutas.Count() > 0)
+{
+    <hr />
+    <div class="row">
+        @foreach (var ruta in Model.Rutas.OrderBy(i => i.Id))
+        {
+            <div class="col-4">
+                <h2>@ruta.Origen - @ruta.Destino</h2>
+                <div class="text-center">₡@ruta.Precio</div>
+                <a asp-action="Details" class="btn btn-success align-self-center" style="border-radius: 10px" asp-route-id="@ruta.Id">
+                    Ver más
+                </a>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No Hay rutas disponibles</p>
+}

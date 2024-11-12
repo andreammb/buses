@@ -1,0 +1,12 @@
+M:\ANDREA\uned\progra\Buses\Buses.Models\bin\Debug\net8.0\Buses.Models.deps.json
+M:\ANDREA\uned\progra\Buses\Buses.Models\bin\Debug\net8.0\Buses.Models.dll
+M:\ANDREA\uned\progra\Buses\Buses.Models\bin\Debug\net8.0\Buses.Models.pdb
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.csproj.AssemblyReference.cache
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.GeneratedMSBuildEditorConfig.editorconfig
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.AssemblyInfoInputs.cache
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.AssemblyInfo.cs
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.csproj.CoreCompileInputs.cache
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.dll
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\refint\Buses.Models.dll
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\Buses.Models.pdb
+M:\ANDREA\uned\progra\Buses\Buses.Models\obj\Debug\net8.0\ref\Buses.Models.dll

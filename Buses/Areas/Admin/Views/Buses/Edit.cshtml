@@ -1,0 +1,60 @@
+﻿@model Buses.Models.ViewModels.BusVM
+
+@{
+    ViewData["Title"] = "Editar Bus";
+}
+
+<br />
+<br />
+<h3 class="text-center">Editar bus</h3>
+<form method="POST" asp-action="Edit">
+    <input type="hidden" asp-for="Bus.Id" />
+    <div class"row px-2 offset-1 border">
+        <div asp-valiodation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-10 offset-1 mt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Bus.Horario"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Bus.Horario" class="form-control" placeholder="Horario
+
+" />
+                    <span asp-validation-for="Bus.Horario" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Bus.AsientosReservados"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Bus.AsientosReservados" class="form-control" placeholder="Asientos Reservados" />
+                    <span asp-validation-for="Bus.AsientosReservados" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label for="Ruta">Ruta</label>
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(m => m.Bus.RutaId, Model.ListaRutas,
+                             "Seleccione una ruta", new { @class = "form-control" })
+                    <span asp-validation-for="Bus.RutaId" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group-row">
+                <div class="col-8">
+                    <partial name="_VistaCrearVolver" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

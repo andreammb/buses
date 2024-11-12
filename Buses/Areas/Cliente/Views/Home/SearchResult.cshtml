@@ -1,0 +1,45 @@
+﻿@model ListaPaginada<Ruta>
+
+<h3>Rutas encontradas</h3>
+@if (Model.Count() >0)
+{
+    <hr />
+    <div class="row">
+        @foreach (var ruta in Model)
+        {
+            <div class="col-4">
+                <h2>@ruta.Origen - @ruta.Destino</h2>
+                <div class="text-center">₡@ruta.Precio</div>
+                <a asp-action="Details" class="btn btn-success align-self-center" style="border: 10px" asp-route-id="@ruta.Id">
+                    Ver más
+                </a>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No hay rutas que coincidan con la búsqueda</p>
+}
+
+<br />
+<br />
+
+<div class="text-center">
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                <a class="page-link" asp-controller="Home" asp-action="ResultadoBusqueda" asp-route-page="@(Model.PageIndex - 1)" asp-route-searchString="@Model.SearchText">Anterior</a>
+            </li>
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                    <a class="page-link" asp-controller="Home" asp-action="ResultadoBusqueda" asp-route-page="@i" asp-route-searchString="@Model.SearchText">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                <a class="page-link" asp-controller="Home" asp-action="ResultadoBusqueda" asp-route-page="@(Model.PageIndex + 1)" asp-route-searchString="@Model.SearchText">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,82 @@
+﻿@model Buses.Models.Ruta
+
+@{
+    ViewData["Title"] = "Editar Ruta";
+}
+
+<br />
+<br />
+<h3 class="text-center">Editar ruta</h3>
+<form method="post" asp-action="Edit">
+    <div class"row px-2 offset-1 border">
+        <div asp-valiodation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-10 offset-1 mt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Origen"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Origen" class="form-control" placeholder="Origen" />
+                    <span asp-validation-for="Origen" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Destino"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Destino" class="form-control" placeholder="Destino" />
+                    <span asp-validation-for="Destino" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="BusesDisponibles"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="BusesDisponibles" class="form-control" placeholder="Buses Disponibles" />
+                    <span asp-validation-for="BusesDisponibles" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Horarios"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Horarios" class="form-control" placeholder="Horarios" />
+                    <span asp-validation-for="Horarios" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Precio"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Precio" class="form-control" placeholder="Precio" />
+                    <span asp-validation-for="Precio" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col">
+                    <a asp-action="Index" class="btn btn-secondary form-control">Regresar</a>
+                </div>
+                &nbsp;
+                <div class="col">
+                    <button type="submit" class="btn btn-success form-control">Editar Ruta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

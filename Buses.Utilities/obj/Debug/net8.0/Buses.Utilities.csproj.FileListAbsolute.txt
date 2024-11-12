@@ -1,0 +1,11 @@
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\bin\Debug\net8.0\Buses.Utilities.deps.json
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\bin\Debug\net8.0\Buses.Utilities.dll
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\bin\Debug\net8.0\Buses.Utilities.pdb
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\Buses.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\Buses.Utilities.AssemblyInfoInputs.cache
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\Buses.Utilities.AssemblyInfo.cs
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\Buses.Utilities.csproj.CoreCompileInputs.cache
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\Buses.Utilities.dll
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\refint\Buses.Utilities.dll
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\Buses.Utilities.pdb
+M:\ANDREA\uned\progra\Buses\Buses.Utilities\obj\Debug\net8.0\ref\Buses.Utilities.dll
